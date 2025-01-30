@@ -9,7 +9,7 @@ const client = new Groq({
   //apiKey: process.env['GROQ_API_KEY'], // <-- Uncommit this line and send a message asking for the envoirnment variable I can't put here
 });
 
-app.get('/', (req, res) => {
+app.get('/chat', (req, res) => {
   const message = req.body;
   console.log(message);
   const response = getChatCompletion(message);

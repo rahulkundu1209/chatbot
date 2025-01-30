@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 
+
 function App() {
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState([]);
@@ -19,7 +20,7 @@ function App() {
         // Check if the question is related to MERN
 
         try {
-            const response = await axios.post("http://localhost:5000/chat", { message: input });
+            const response = await axios.post("http://localhost:5000/chat", { content: input });
 
             const botMessage = {
                 sender: "bot",

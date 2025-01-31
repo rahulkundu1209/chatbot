@@ -76,7 +76,8 @@ h2 {
 
 .chat-box .bot {
 	/* // preserve the white psace */
-	white-space: pre-wrap;
+	list-style-position: inside;
+	white-space: pre-line;
 	align-self: flex-start;
 	background: #1e88e5;
 	padding: 10px;

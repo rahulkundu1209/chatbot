@@ -1,7 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import './Chatbot.css'
-export default function Chatbot(){
+import ReactMarkdown from "react-markdown"
+export default function Chatbot() {
 	const [input, setInput] = useState("");
 	const [messages, setMessages] = useState([]);
 	const [questionHistory, setQuestionHistory] = useState([]);
@@ -59,7 +60,11 @@ export default function Chatbot(){
 					{messages.map((msg, index) => (
 						<div key={index} className={msg.sender}>
 							<div className="message">
-								<span>{msg.text}</span>
+								<span>
+									<ReactMarkdown>
+										{msg.text}
+									</ReactMarkdown>
+								</span>
 							</div>
 						</div>
 					))}

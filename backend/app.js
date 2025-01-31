@@ -41,7 +41,7 @@ async function getChatCompletion(message) {
     model: 'llama-3.3-70b-versatile',
   });
 
-  return chatcompletion.choices[0].message.content;
+  return (chatcompletion.choices[0].message.content);
 }
 
 const PORT = process.env.PORT || 5000;

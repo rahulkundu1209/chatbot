@@ -21,7 +21,8 @@ export default function Chatbot(){
 			const response = await axios.post("http://localhost:5000/chat", {
 				content: input,
 			});
-
+			// response - JSON.parse(response)
+			// response = JSON.stringify(response)
 			const botMessage = {
 				sender: "bot",
 				text: response.data
